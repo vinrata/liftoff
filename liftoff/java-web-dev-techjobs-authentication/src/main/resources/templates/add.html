@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container body-content">
+
+<nav th:replace="fragments :: page-header"></nav>
+
+<!--
+ this.carModel = aCarModel;
+        this.carYear = aCarYear;
+        this.vin = aVin;
+        this.mileage = aMileage;
+        this.expirationDate = anExpirationDate;
+        this.plate = aPlate;
+-->
+
+<h1>Add Car to Fleet</h1>
+
+<form method="post" style="max-width:600px;">
+    <div class="form-group">
+        <label th:for="name">Car Model</label>
+        <input class="form-control" th:field="${car.carModel}" />
+        <span th:errors="${car.carModel}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label th:for="name">Car Make</label>
+        <input class="form-control" th:field="${car.carMake}" />
+        <span th:errors="${car.carMake}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label th:for="name">Year Made</label>
+        <input class="form-control" th:field="${car.carYear}" />
+        <span th:errors="${car.carYear}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label th:for="name">VIN</label>
+        <input class="form-control" th:field="${car.vin}" />
+        <span th:errors="${car.vin}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label th:for="name">Mileage</label>
+        <input class="form-control" th:field="${car.mileage}" />
+        <span th:errors="${car.mileage}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label th:for="name">Days Until Expiration</label>
+        <input class="form-control" th:field="${car.daysUntilExpiration}" />
+        <span th:errors="${car.daysUntilExpiration}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label th:for="name">License Plate</label>
+        <input class="form-control" th:field="${car.plate}" />
+        <span th:errors="${car.plate}" class="error"></span>
+    </div>
+
+    <input type="submit" value="Add Job" />
+</form>
+
+</body>
+</html>

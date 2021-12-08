@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container  body-content">
+<!--<h1 th:text="${'Car: ' + .name}">Default Title</h1> -->
+
+<nav th:replace="fragments :: page-header"></nav>
+
+<div class="car-listing">
+    <p th:text="${'ID: ' + car.id}"></p>
+    <p th:text="${'Model: ' + car.carModel}"></p>
+    <p th:text="${'Make: ' + car.carMake}"></p>
+    <p th:text="${'Year: ' + car.carYear}"></p>
+    <p th:text="${'VIN: ' + car.vin}"></p>
+    <p th:text="${'Mileage: ' + car.mileage}"></p>
+    <p th:text="${'Days Until Expiration: ' + car.daysUntilExpiration}"></p>
+    <p th:text="${'License Plate: ' + car.plate}"></p>
+</div>
+
+<!--
+ this.carModel = aCarModel;
+        this.carYear = aCarYear;
+        this.vin = aVin;
+        this.mileage = aMileage;
+        this.expirationDate = anExpirationDate;
+        this.plate = aPlate;
+-->
+</body>
+</html>
