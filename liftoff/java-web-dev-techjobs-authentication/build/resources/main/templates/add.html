@@ -18,6 +18,11 @@
 
 <form method="post" style="max-width:600px;">
     <div class="form-group">
+        <label th:for="name">Driver Name</label>
+        <input class="form-control" th:field="${car.driverName}" />
+        <span th:errors="${car.driverName}" class="error"></span>
+    </div>
+    <div class="form-group">
         <label th:for="name">Car Model</label>
         <input class="form-control" th:field="${car.carModel}" />
         <span th:errors="${car.carModel}" class="error"></span>

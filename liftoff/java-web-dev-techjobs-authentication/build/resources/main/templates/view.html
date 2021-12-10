@@ -8,6 +8,7 @@
 <nav th:replace="fragments :: page-header"></nav>
 
 <div class="car-listing">
+    <p th:text="${'Driver: ' + car.driverName}"></p>
     <p th:text="${'ID: ' + car.id}"></p>
     <p th:text="${'Model: ' + car.carModel}"></p>
     <p th:text="${'Make: ' + car.carMake}"></p>

@@ -14,7 +14,7 @@
      <ul>
          <li th:each="car : ${cars}">
              <a th:href="@{'/view/' + ${car.id}}">
-
+                <p th:text="${car.driverName}"></p>
              </a>
          </li>
      </ul>

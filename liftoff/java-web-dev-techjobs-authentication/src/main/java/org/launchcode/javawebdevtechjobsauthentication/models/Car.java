@@ -11,6 +11,10 @@ public class Car extends AbstractEntity{
 
     @NotNull
     @Size(min=3, max=50)
+    private String driverName;
+
+    @NotNull
+    @Size(min=3, max=50)
     private String carModel;
 
     @NotNull
@@ -41,8 +45,9 @@ public class Car extends AbstractEntity{
     }
 
     // Initialize the id and value fields.
-    public Car(String aCarModel, int aCarYear, String aVin, int aMileage, int aDaysUntilExpiration, String aPlate, String aCarMake ) {
+    public Car(String aDriverName, String aCarModel,String aCarMake, int aCarYear, String aVin, int aMileage, int aDaysUntilExpiration, String aPlate ) {
         super();
+        this.driverName = aDriverName;
         this.carModel = aCarModel;
         this.carMake = aCarMake;
         this.carYear = aCarYear;
@@ -50,6 +55,7 @@ public class Car extends AbstractEntity{
         this.mileage = aMileage;
         this.daysUntilExpiration = aDaysUntilExpiration;
         this.plate = aPlate;
+
 
     }
 
@@ -111,9 +117,16 @@ public class Car extends AbstractEntity{
         this.plate = plate;
     }
 
+    public String getDriverName() {
+        return driverName;
+    }
 
-    //@Override
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
+    }
+// @Override
    // public String toString() {
     //    return name;
-   // }
+    //}
+
 }

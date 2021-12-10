@@ -60,3 +60,8 @@ div.car-listing {
     width: 80%;
     background-color: #e4e4e4;
 }
+
+div.middlePlease {
+  text-align: center;
+  border: 3px solid blue;
+}
