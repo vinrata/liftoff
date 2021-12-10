@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+    <h2>Welcome Manager</h2>
+
+
+
+     <ul>
+         <li th:each="car : ${cars}">
+             <a th:href="@{'/view/' + ${car.id}}">
+                <p th:text="${car.driverName}"></p>
+             </a>
+         </li>
+     </ul>
+
+ </div>
+
+ </body>
+ </html>
