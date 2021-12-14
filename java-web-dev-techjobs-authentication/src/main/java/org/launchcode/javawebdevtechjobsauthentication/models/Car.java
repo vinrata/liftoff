@@ -41,11 +41,13 @@ public class Car extends AbstractEntity{
     @Size(min=1, max=6)
     private String plate;
 
+    private String combo;
+
     public Car() {
     }
 
     // Initialize the id and value fields.
-    public Car(String aDriverName, String aCarModel,String aCarMake, int aCarYear, String aVin, int aMileage, int aDaysUntilExpiration, String aPlate ) {
+    public Car(String aDriverName, String aCarModel,String aCarMake, int aCarYear, String aVin, int aMileage, int aDaysUntilExpiration, String aPlate, String aCombo ) {
         super();
         this.driverName = aDriverName;
         this.carModel = aCarModel;
@@ -55,11 +57,22 @@ public class Car extends AbstractEntity{
         this.mileage = aMileage;
         this.daysUntilExpiration = aDaysUntilExpiration;
         this.plate = aPlate;
+        this.combo = aCombo;
+        this.combo = aDriverName + aCarMake + aCarModel  + aCarYear + aVin + aPlate;
 
 
     }
 
     // Getters and setters.
+
+
+    public String getCombo() {
+        return combo;
+    }
+
+    public void setCombo(String combo) {
+        this.combo = combo;
+    }
 
     public String getCarMake() {
         return carMake;

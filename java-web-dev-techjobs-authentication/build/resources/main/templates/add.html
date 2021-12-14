@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head"></head>
+<head th:replace="fragments :: head">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+
+
+
+</head>
 <body class="container body-content">
 
 <nav th:replace="fragments :: page-header"></nav>
@@ -29,8 +38,17 @@
     </div>
     <div class="form-group">
         <label th:for="name">Car Make</label>
-        <input class="form-control" th:field="${car.carMake}" />
-        <span th:errors="${car.carMake}" class="error"></span>
+        <select class="form-control" name="carMake" id = "carMakes" th:field="${car.carMake}">
+            <option value="Acura">Acura</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Ford">Ford</option>
+            <option value="Nissan">Nissan</option>
+            <option value="BMW">BMW</option>
+            <option value="GMC">GMC</option>
+            <option value="Lexus">Lexus</option>
+        </select>
+        <!--<input class="form-control" th:field="${car.carMake}" />
+        <span th:errors="${car.carMake}" class="error"></span> -->
     </div>
     <div class="form-group">
         <label th:for="name">Year Made</label>
@@ -58,7 +76,8 @@
         <span th:errors="${car.plate}" class="error"></span>
     </div>
 
-    <input type="submit" value="Add Job" />
+    <input type="submit" value="Add Car" />
+    <br>
 </form>
 
 </body>

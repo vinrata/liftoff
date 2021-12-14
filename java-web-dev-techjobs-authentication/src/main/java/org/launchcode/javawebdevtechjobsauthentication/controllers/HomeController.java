@@ -1,6 +1,7 @@
 package org.launchcode.javawebdevtechjobsauthentication.controllers;
 
 import org.launchcode.javawebdevtechjobsauthentication.models.data.CarRepository;
+import org.launchcode.javawebdevtechjobsauthentication.models.data.UserRepository;
 import org.launchcode.javawebdevtechjobsauthentication.models.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,9 +21,14 @@ public class HomeController {
     @Autowired
     private CarRepository carRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
     @RequestMapping("")
     public String index(Model model) {
         model.addAttribute("cars", carRepository.findAll());
+        model.addAttribute("users", userRepository.findAll());
+
         return "index";
     }
 
