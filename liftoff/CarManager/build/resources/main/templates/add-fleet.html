@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+
+
+
+</head>
+<body class="container body-content">
+
+<nav th:replace="fragments :: page-header"></nav>
+
+<!--
+ this.carModel = aCarModel;
+        this.carYear = aCarYear;
+        this.vin = aVin;
+        this.mileage = aMileage;
+        this.expirationDate = anExpirationDate;
+        this.plate = aPlate;
+-->
+
+<h1>Create A New Fleet</h1>
+<br>
+<div class="buttonPaddingg">
+<form method="post" style="max-width:600px;">
+    <div class="form-group">
+        <label th:for="name">Fleet Name</label>
+        <input class="form-control" th:field="${fleet.fleetName}" />
+        <span th:errors="${fleet.fleetName}" class="error"></span>
+    </div>
+    <div class="form-group">
+        <label th:for="name">Car 1</label>
+        <select class="form-control" name="car1" id = "car1" th:field="${fleet.car1}">
+            <option value="${fleet.car1}">January</option>
+        </select>
+    </div>
+
+
+
+
+
+
+    <input type="submit" value="Add Fleet" />
+    <br>
+</form>
+</div>
+</body>
+</html>
