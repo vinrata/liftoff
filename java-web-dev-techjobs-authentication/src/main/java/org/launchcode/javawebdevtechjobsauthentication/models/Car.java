@@ -11,7 +11,21 @@ public class Car extends AbstractEntity{
 
     @NotNull
     @Size(min=3, max=50)
-    private String driverName;
+    private String driverFirstName;
+
+    @NotNull
+    @Size(min=3, max=50)
+    private String driverLastName;
+
+    @NotNull
+    @Size(min=3, max=50)
+    private String carExpMonth;
+
+    @NotNull
+    private int carExpDay;
+
+    @NotNull
+    private int carExpYear;
 
     @NotNull
     @Size(min=3, max=50)
@@ -33,9 +47,9 @@ public class Car extends AbstractEntity{
     @Range(min=1, max=99999999)
     private int mileage;
 
-    @NotNull
-    @Range(min=1, max=9999999)
-    private int daysUntilExpiration; //days until expiration
+    //@NotNull
+    //@Range(min=1, max=9999999)
+    //private int daysUntilExpiration; //days until expiration
 
     @NotNull
     @Size(min=1, max=6)
@@ -47,18 +61,22 @@ public class Car extends AbstractEntity{
     }
 
     // Initialize the id and value fields.
-    public Car(String aDriverName, String aCarModel,String aCarMake, int aCarYear, String aVin, int aMileage, int aDaysUntilExpiration, String aPlate, String aCombo ) {
+    public Car(String aCarExpMonth, int aCarExpYear, int aCarExpDay, String aDriverFirstName,String aDriverLastName, String aCarModel,String aCarMake, int aCarYear, String aVin, int aMileage, int aDaysUntilExpiration, String aPlate, String aCombo ) {
         super();
-        this.driverName = aDriverName;
+        this.driverFirstName = aDriverFirstName;
+        this.driverLastName = aDriverLastName;
+        this.carExpDay = aCarExpDay;
+        this.carExpMonth = aCarExpMonth;
+        this.carExpYear = aCarExpYear;
         this.carModel = aCarModel;
         this.carMake = aCarMake;
         this.carYear = aCarYear;
         this.vin = aVin;
         this.mileage = aMileage;
-        this.daysUntilExpiration = aDaysUntilExpiration;
+        //this.daysUntilExpiration = aDaysUntilExpiration;
         this.plate = aPlate;
         this.combo = aCombo;
-        this.combo = aDriverName + aCarMake + aCarModel  + aCarYear + aVin + aPlate;
+        this.combo = aDriverFirstName + aDriverLastName+ aCarMake + aCarModel  + aCarYear + aVin + aPlate;
 
 
     }
@@ -114,13 +132,31 @@ public class Car extends AbstractEntity{
         this.mileage = mileage;
     }
 
-    public int getDaysUntilExpiration() {
-        return daysUntilExpiration;
+    public String getCarExpMonth() {
+        return carExpMonth;
     }
 
-    public void setDaysUntilExpiration(int daysUntilExpiration) {
-        this.daysUntilExpiration = daysUntilExpiration;
+    public void setCarExpMonth(String carExpMonth) {
+        this.carExpMonth = carExpMonth;
     }
+
+    public int getCarExpDay() {
+        return carExpDay;
+    }
+
+    public void setCarExpDay(int carExpDay) {
+        this.carExpDay = carExpDay;
+    }
+
+    public int getCarExpYear() {
+        return carExpYear;
+    }
+
+    public void setCarExpYear(int carExpYear) {
+        this.carExpYear = carExpYear;
+    }
+
+
 
     public String getPlate() {
         return plate;
@@ -130,12 +166,20 @@ public class Car extends AbstractEntity{
         this.plate = plate;
     }
 
-    public String getDriverName() {
-        return driverName;
+    public String getDriverFirstName() {
+        return driverFirstName;
     }
 
-    public void setDriverName(String driverName) {
-        this.driverName = driverName;
+    public void setDriverFirstName(String driverFirstName) {
+        this.driverFirstName = driverFirstName;
+    }
+
+    public String getDriverLastName() {
+        return driverLastName;
+    }
+
+    public void setDriverLastName(String driverLastName) {
+        this.driverLastName = driverLastName;
     }
 // @Override
    // public String toString() {

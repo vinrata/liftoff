@@ -20,15 +20,23 @@
 <div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a th:href="@{/}" class="navbar-brand">Manager Portal</a>
+            <a th:href="@{/}" class="navbar-brand">Dashboard</a>
+
         </div>
-        <div class="navbar-collapse collapse">
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <!--<li><a th:href="@{/}">Dashboard</a></li>-->
                 <li><a th:href="@{/add}">Add Cars To Fleet</a></li>
                 <li><a th:href="@{/profile}">Profile</a></li>
+                <li><a th:href="@{/view-managers}">View All Managers</a></li>
                 <li><a th:href="@{/logout}">Logout</a></li>
             </ul>
         </div>
+
+
+
     </div>
 </div>
 

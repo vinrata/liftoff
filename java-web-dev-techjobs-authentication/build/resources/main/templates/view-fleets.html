@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+    <h2>All Fleets</h2>
+
+
+
+     <ul>
+         <li th:each="fleet : ${fleets}">
+             <p th:text="${fleet.fleetName}"></p>
+             <a th:href="@{'/view/' + ${fleet.id}}">
+                <p>Details</p>
+             </a>
+         </li>
+     </ul>
+
+ </div>
+
+ </body>
+ </html>
