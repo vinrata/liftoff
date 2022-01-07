@@ -21,12 +21,13 @@
 
 <div class="container body-content">
     <h2>Your Profile</h2>
-    <div sec:authorize="isAuthenticated()">Authenticated as <span sec:authentication="user"></span></div>
 
     <ul>
 
-       <li>Username: </li>
-       <li>Name: </li>
+       <li th:text="${session.username}">
+
+       </li>
+       <li> <img th:src="${session.pfp}" height="150" width="150"/> </li>
 
    </ul>
 

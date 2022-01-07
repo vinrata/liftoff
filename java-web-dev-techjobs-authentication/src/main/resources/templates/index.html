@@ -11,11 +11,13 @@
 <div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
-    <h2>Welcome Manager</h2>
-    <p th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"></p>
+    <h2>Welcome <p th:text="${session.username}"> </p>
+    <img th:src="${session.pfp}" alt="pfp" width="150px" height="150px"/>
+
+    </h2>
+    <p>Today's Date is: <p th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"></p></p>
 
 
-        <p th:text="${currentUser}"> </p>
 
 
    <!-- <ul>

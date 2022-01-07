@@ -43,6 +43,12 @@ public class AuthenticationController {
         return user.get();
     }
 
+
+
+
+
+
+
     @GetMapping("/register")
     public String displayRegistrationForm(Model model) {
         model.addAttribute(new RegisterDTO());
@@ -75,8 +81,9 @@ public class AuthenticationController {
             model.addAttribute("title", "Register");
             return "register";
         }
+        //String pfp = registerDTO.getPfp();
 
-        User newUser = new User(registerDTO.getUsername(), registerDTO.getPassword());
+        User newUser = new User(registerDTO.getUsername(), registerDTO.getPassword(), registerDTO.getPfp());
         userRepository.save(newUser);
         setUserInSession(request.getSession(), newUser);
 
@@ -123,6 +130,9 @@ public class AuthenticationController {
 
     private static void setUserInSession(HttpSession session, User user) {
         session.setAttribute(userSessionKey, user.getId());
+        session.setAttribute("username", user.getUsername());
+        session.setAttribute("pfp", user.getPfp());
+
     }
 
     @GetMapping("/logout")

@@ -36,7 +36,7 @@ public class Car extends AbstractEntity{
     private String carMake;
 
     @NotNull
-    @Range(min=4, max=99999)
+    @Range(min=1905, max=2022)
     private int carYear;
 
     @NotNull
@@ -44,7 +44,7 @@ public class Car extends AbstractEntity{
     private String vin;
 
     @NotNull
-    @Range(min=1, max=99999999)
+    @Range(min=1, max=999999)
     private int mileage;
 
     //@NotNull

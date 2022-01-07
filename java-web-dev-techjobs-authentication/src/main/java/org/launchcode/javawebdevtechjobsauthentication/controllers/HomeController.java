@@ -42,6 +42,7 @@ public class HomeController {
         model.addAttribute("cars", carRepository.findAll());
         model.addAttribute("users", userRepository.findAll());
         model.addAttribute("currentUser", loginFormDTO.getUsername());
+        model.addAttribute("pfp", loginFormDTO.getPfp());
 
         return "index";
     }
@@ -125,6 +126,17 @@ public class HomeController {
             return "redirect:/";
         }
     }
+    @GetMapping("view-user/{userId}")
+    public String displayViewUser(Model model, @PathVariable int userId) {
 
+        Optional optUser = userRepository.findById(userId);
+        if (!optUser.isEmpty()) {
+            User user = (User) optUser.get();
+            model.addAttribute("user", user);
+            return "view-user";
+        } else {
+            return "redirect:/";
+        }
+    }
 
 }
