@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="fragments :: head">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+    <h2>Car Pool</h2>
+    <h3>All of these cars are available!</h3>
+    <div class="borderCars">
+    <ul>
+        <li th:each="car : ${cars}">
+            <a th:href="@{'/view/' + ${car.id}}">
+            <p th:text="${car.carMake}"> </p>
+            <p th:text="${car.carModel}"> </p>
+                <p>Driven By:</p>
+                <p th:text="${car.driverFirstName}"></p>
+                <p th:text="${car.driverLastName}"></p>
+            </a>
+        </li>
+    </ul>
+    </div>
+</div>
+</body>
+</html>
