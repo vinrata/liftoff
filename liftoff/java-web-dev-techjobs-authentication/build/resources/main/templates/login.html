@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body class="container">
+
+<div class ="wrapp" align="center">
+<img   src="https://www.vinny.info/images1/driftstage1.gif" style="width:20em; height:auto;" alt="Purple Drift Stage Car Gif"/>
+ <img   src="https://www.vinny.info/images1/driftstage2.gif" style="width:20em; height:auto;" alt=" White Drift Stage Car Gif"/>
+</div>
+<!--<div class="middlePlease">-->
+<p class="sign" align="center">Welcome to Fleet Manager</p>
+
+<div class="mainn">
+    <p class="sign" align="center">Sign In</p>
+<form method="post">
+
+            <input class="unn" th:field="${loginDTO.username}" align="center" placeholder="Username">
+        <p class="error" th:errors="${loginDTO.username}" align="center"></p>
+            <input class="pass" th:field="${loginDTO.password}" align="center"  type="password"  placeholder="Password">
+        <p class="error" th:errors="${loginDTO.password}" align="center"></p>
+
+    <input type="submit" class="submit" align="center" value="Sign In" />
+     <div class="forgot"><p align="center">Don't have an account? <a href="/register">Register for one.</a></p></div>
+
+</form>
+    <!-- <p>Don't have an account? <a href="/register">Register for one.</a></p> -->
+
+</div>
+  <!-- </div> -->
+
+ <!-- </div> -->
+
+
+</body>
+</html>

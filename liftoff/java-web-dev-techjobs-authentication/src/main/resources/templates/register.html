@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+</head>
+<body class="container">
+
+<div class="buttonPaddingg">
+    <div class="mainn">
+        <p class="sign" align="center">Sign Up</p>
+        <form method="post">
+            <input class="unn" th:field="${registerDTO.username}" placeholder="Username"/>
+        <p class="error" th:errors="${registerDTO.username}"></p>
+            <input class="pass" th:field="${registerDTO.password}" type="password" placeholder="Password"/>
+        <p class="error" th:errors="${registerDTO.password}"></p>
+            <input class="pass" th:field="${registerDTO.verifyPassword}" type="password" placeholder="Verify Password"/>
+            <p class="sign2" align="center">Choose an avatar below!</p>
+
+    </div>
+
+
+    <div class="radioo">
+        <h2>(these were generated with Vinny's art + <a href="https://github.com/HashLips/generative-art-opensource">github</a>) </h2>
+        <label>
+            <img src="https://vinny.info/generated-pfps/1.png" alt="Person 1 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 1" value="https://vinny.info/generated-pfps/1.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/2.png" alt="Person 2 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 2" value="https://vinny.info/generated-pfps/2.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/3.png" alt="Person 3 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 3" value="https://vinny.info/generated-pfps/3.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/4.png" alt="Person 4 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 4" value="https://vinny.info/generated-pfps/4.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/5.png" alt="Person 5 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 5" value="https://vinny.info/generated-pfps/5.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/6.png" alt="Person 6 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 6" value="https://vinny.info/generated-pfps/6.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/7.png" alt="Person 7 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 7" value="https://vinny.info/generated-pfps/7.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/8.png" alt="Person 8 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 8" value="https://vinny.info/generated-pfps/8.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/9.png" alt="Person 9 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 9" value="https://vinny.info/generated-pfps/9.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/10.png" alt="Person 10 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 10" value="https://vinny.info/generated-pfps/10.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/11.png" alt="Person 11 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 11" value="https://vinny.info/generated-pfps/11.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/12.png" alt="Person 12 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 12" value="https://vinny.info/generated-pfps/12.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/13.png" alt="Person 13 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 13" value="https://vinny.info/generated-pfps/13.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/14.png" alt="Person 14 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 14" value="https://vinny.info/generated-pfps/14.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/15.png" alt="Person 15 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 15" value="https://vinny.info/generated-pfps/15.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/16.png" alt="Person 16 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 16" value="https://vinny.info/generated-pfps/16.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/17.png" alt="Person 17 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 17" value="https://vinny.info/generated-pfps/17.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/18.png" alt="Person 18 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 18" value="https://vinny.info/generated-pfps/18.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/19.png" alt="Person 19 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 19" value="https://vinny.info/generated-pfps/19.png" th:field="${registerDTO.pfp}" />
+        </label>
+        <label>
+            <img src="https://vinny.info/generated-pfps/20.png" alt="Person 20 pfp image" width="200" height="200" />
+            <input type="radio"  name="pfp" class="radio" id="Person 20" value="https://vinny.info/generated-pfps/20.png" th:field="${registerDTO.pfp}" />
+        </label>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Register" />
+</form>
+</div>
+</body>
+</html>
