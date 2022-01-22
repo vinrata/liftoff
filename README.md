@@ -1,6 +1,6 @@
 # Fleet Manager
-
-The project is an example for a vehicle fleet mangement company. 
+This project uses Java, Spring Boot, mySQL, HTML and CSS. 
+The web app is an example for a vehicle fleet mangement company. 
 Managers can use this as a portal to add new vehicles and check on existing ones.
 
 Users can create accounts.  The passwords are encrypted.  Their information is stored in the mysql database.  Users can create new car entries for their fleet.
