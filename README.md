@@ -14,7 +14,7 @@ The database stores all of the information on the user created cars. Every manag
 ![alt text](https://github.com/vinrata/liftoff/blob/vinrata-patch-2/mysqldatabase1.png?raw=true)
 
 
-The databse also stores all of the user's account information.  The passwords are encrypted so even I so not know them.
+The database also stores all of the user's account information.  The passwords are encrypted.
 There is an authentication layer during the sign-up process. 
 ![alt text](https://github.com/vinrata/liftoff/blob/vinrata-patch-2/mysqldatabase2.png?raw=true)
 
